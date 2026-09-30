@@ -18,6 +18,27 @@
   ]
 }</script>
 <meta name="google-site-verification" content="zLlVGJDDYltB6XzTMgeozYbUtLyuTbn07qa7FyZJJqg" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BFBSYMKCT4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BFBSYMKCT4');
+
+  // Registra o clique para abrir o WhatsApp, sem indicar uma reserva concluída.
+  document.addEventListener('click', function(event) {
+    var link = event.target.closest('a[data-whatsapp-chalet]');
+    if (!link) return;
+
+    gtag('event', 'whatsapp_click', {
+      send_to: 'G-BFBSYMKCT4',
+      chalet: link.dataset.whatsappChalet,
+      button_location: link.dataset.whatsappLocation,
+      transport_type: 'beacon'
+    });
+  });
+</script>
 </head>
 <body>
 <header class="header" id="header"><a class="logo" href="#inicio" aria-label="ALPEN Chalés — início"><img src="assets/brand/alpen-monogram-transparent.png" alt="" aria-hidden="true"><span>ALPEN <em>Chalés</em></span></a><button class="menu" id="menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span><b>Menu</b></button><nav id="nav" aria-label="Navegação principal"><a href="#chales">Os chalés</a><a href="#experiencia">A experiência</a><a href="#cafe">Café da manhã</a><a href="#avaliacoes">Avaliações</a><a href="#localizacao">Localização</a><a class="nav-book" href="#reservas">Reservar</a></nav></header>
@@ -45,8 +66,8 @@
   </div>
 </section>
 
-<section class="booking" id="reservas"><p class="eyebrow">Sua estadia começa aqui</p><h2>Qual refúgio combina com vocês?</h2><div class="booking-grid"><article><h3>Chalé Gralha</h3><p>Hidromassagem diante da mata e deck privativo.</p><div class="booking-actions"><a class="direct" href="https://wa.me/5524993109852?text=Olá!%20Gostaria%20de%20consultar%20datas%20para%20o%20Chalé%20Gralha." target="_blank" rel="noopener">WhatsApp</a><a href="https://www.airbnb.com.br/rooms/912497081102240687" target="_blank" rel="noopener">Airbnb</a><a href="https://www.booking.com/Share-O7uRjx" target="_blank" rel="noopener">Booking</a></div></article><article><h3>Chalé Tucano</h3><p>Varanda envidraçada e vista aberta para o jardim.</p><div class="booking-actions"><a class="direct" href="https://wa.me/5524993109852?text=Olá!%20Gostaria%20de%20consultar%20datas%20para%20o%20Chalé%20Tucano." target="_blank" rel="noopener">WhatsApp</a><a href="https://www.airbnb.com.br/rooms/1063276879505331652" target="_blank" rel="noopener">Airbnb</a><a href="https://www.booking.com/Share-bXSYvZJ" target="_blank" rel="noopener">Booking</a></div></article></div><small>Reserve via WhatsApp - Será um prazer lhe atender!</small></section>
+<section class="booking" id="reservas"><p class="eyebrow">Sua estadia começa aqui</p><h2>Qual refúgio combina com vocês?</h2><div class="booking-grid"><article><h3>Chalé Gralha</h3><p>Hidromassagem diante da mata e deck privativo.</p><div class="booking-actions"><a class="direct" data-whatsapp-chalet="gralha" data-whatsapp-location="reservas" href="https://wa.me/5524993109852?text=Olá!%20Gostaria%20de%20consultar%20datas%20para%20o%20Chalé%20Gralha." target="_blank" rel="noopener">WhatsApp</a><a href="https://www.airbnb.com.br/rooms/912497081102240687" target="_blank" rel="noopener">Airbnb</a><a href="https://www.booking.com/Share-O7uRjx" target="_blank" rel="noopener">Booking</a></div></article><article><h3>Chalé Tucano</h3><p>Varanda envidraçada e vista aberta para o jardim.</p><div class="booking-actions"><a class="direct" data-whatsapp-chalet="tucano" data-whatsapp-location="reservas" href="https://wa.me/5524993109852?text=Olá!%20Gostaria%20de%20consultar%20datas%20para%20o%20Chalé%20Tucano." target="_blank" rel="noopener">WhatsApp</a><a href="https://www.airbnb.com.br/rooms/1063276879505331652" target="_blank" rel="noopener">Airbnb</a><a href="https://www.booking.com/Share-bXSYvZJ" target="_blank" rel="noopener">Booking</a></div></article></div><small>Reserve via WhatsApp - Será um prazer lhe atender!</small></section>
 </main>
-<footer><a class="footer-brand" href="#inicio" aria-label="Voltar ao início"><img src="assets/brand/alpen-monogram-transparent.png" alt="Monograma ALPEN Chalés"></a><p>Alto da Maromba · Visconde de Mauá · RJ</p><div class="footer-social"><a href="https://www.instagram.com/alpenchales/" target="_blank" rel="noopener" aria-label="Instagram do ALPEN Chalés"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="icon-fill"/></svg></a><a href="https://wa.me/5524993109852" target="_blank" rel="noopener" aria-label="Falar com o ALPEN Chalés pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.5-4.4A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M8.2 7.7c.2-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.8 2c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.7 1.3 1.8 2.3 3.1 3 .2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l2 .9c.3.1.4.3.4.6 0 .6-.3 1.5-.8 1.9-.5.5-1.3.8-2.1.8-1.1 0-2.6-.5-4.4-1.5-2.6-1.5-4.3-3.8-4.8-4.6-.5-.8-1.1-2.1-1.1-3.2 0-1.1.6-1.9 1.1-2.3.2-.1.4-.2.6-.2Z"/></svg></a></div></footer>
+<footer><a class="footer-brand" href="#inicio" aria-label="Voltar ao início"><img src="assets/brand/alpen-monogram-transparent.png" alt="Monograma ALPEN Chalés"></a><p>Alto da Maromba · Visconde de Mauá · RJ</p><div class="footer-social"><a href="https://www.instagram.com/alpenchales/" target="_blank" rel="noopener" aria-label="Instagram do ALPEN Chalés"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="icon-fill"/></svg></a><a data-whatsapp-chalet="geral" data-whatsapp-location="rodape" href="https://wa.me/5524993109852" target="_blank" rel="noopener" aria-label="Falar com o ALPEN Chalés pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.5-4.4A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M8.2 7.7c.2-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.8 2c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.7 1.3 1.8 2.3 3.1 3 .2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l2 .9c.3.1.4.3.4.6 0 .6-.3 1.5-.8 1.9-.5.5-1.3.8-2.1.8-1.1 0-2.6-.5-4.4-1.5-2.6-1.5-4.3-3.8-4.8-4.6-.5-.8-1.1-2.1-1.1-3.2 0-1.1.6-1.9 1.1-2.3.2-.1.4-.2.6-.2Z"/></svg></a></div></footer>
 <dialog class="gallery-dialog" id="galleryDialog"><button class="gallery-close" aria-label="Fechar galeria">×</button><button class="gallery-prev" aria-label="Foto anterior">‹</button><figure><img src="" alt=""><figcaption></figcaption></figure><button class="gallery-next" aria-label="Próxima foto">›</button></dialog><script src="script.js"></script>
 </body></html>
